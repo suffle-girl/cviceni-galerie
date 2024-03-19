@@ -14,6 +14,7 @@ body {
 
 img {
   display: block;
+  width: 100%;
 }
 
 /*
@@ -28,3 +29,41 @@ výchozí (=mobil) - 1 obrázek na řádku (tj. 12 obrázků pod sebou)
 širší než 800px  - 4 obrázky vedle sebe
 širší než 1000px - 6 obrázků vedle sebe
 */
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foto {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+@media (min-width: 500px) {
+  .foto {
+    width: 50%;
+    
+  }
+}
+
+@media (min-width: 650px) {
+  .foto {
+    width: 33%;
+    
+  }
+}
+
+@media (min-width: 800px) {
+  .foto {
+    width: 25%;
+    
+  }
+}
+
+@media (min-width: 1000px) {
+  .foto {
+    width: 16%;
+    
+  }
+}
